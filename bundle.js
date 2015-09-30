@@ -23551,6 +23551,8 @@
 	var React = __webpack_require__(1);
 	var Main = __webpack_require__(197);
 	var Home = __webpack_require__(198);
+	var Thanks = __webpack_require__(203);
+	var College = __webpack_require__(204);
 	var Router = __webpack_require__(157);
 	var DefaultRoute = Router.DefaultRoute;
 	var Route = Router.Route;
@@ -23558,6 +23560,8 @@
 	module.exports = React.createElement(
 	  Route,
 	  { name: 'app', path: '/', handler: Main },
+	  React.createElement(Route, { name: 'thanks', path: '1', handler: Thanks }),
+	  React.createElement(Route, { name: 'college', path: '2', handler: College }),
 	  React.createElement(DefaultRoute, { handler: Home })
 	);
 
@@ -23608,6 +23612,28 @@
 	        "p",
 	        null,
 	        "Send beautifully goofy, personalized e-cards."
+	      ),
+	      React.createElement(
+	        "ul",
+	        { className: "list-reset" },
+	        React.createElement(
+	          "li",
+	          null,
+	          React.createElement(
+	            "a",
+	            { href: "/1" },
+	            "Thank You (Gift)"
+	          )
+	        ),
+	        React.createElement(
+	          "li",
+	          null,
+	          React.createElement(
+	            "a",
+	            { href: "/2" },
+	            "Graduation"
+	          )
+	        )
 	      )
 	    );
 	  }
@@ -23935,6 +23961,78 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
+
+/***/ },
+/* 203 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(1);
+
+	var Thanks = React.createClass({
+	  displayName: "Thanks",
+
+	  render: function render() {
+	    return React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "h2",
+	        { className: "h00-responsive" },
+	        "Thanks for the"
+	      ),
+	      React.createElement(
+	        "form",
+	        null,
+	        React.createElement(
+	          "label",
+	          { className: "hide" },
+	          "gift"
+	        ),
+	        React.createElement("input", { type: "text", className: "block field y-group-item", placeholder: "amazing pair of socks!" })
+	      )
+	    );
+	  }
+	});
+
+	module.exports = Thanks;
+
+/***/ },
+/* 204 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(1);
+
+	var College = React.createClass({
+	  displayName: "College",
+
+	  render: function render() {
+	    return React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "h2",
+	        { className: "h00-responsive" },
+	        "Good luck at college! Don't"
+	      ),
+	      React.createElement(
+	        "form",
+	        null,
+	        React.createElement(
+	          "label",
+	          { className: "hide" },
+	          "Helpful advice"
+	        ),
+	        React.createElement("input", { type: "text", className: "block field y-group-item", placeholder: "forget to change your sheets!" })
+	      )
+	    );
+	  }
+	});
+
+	module.exports = College;
 
 /***/ }
 /******/ ]);

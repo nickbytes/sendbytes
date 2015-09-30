@@ -6,7 +6,7 @@ var Thanks = React.createClass({
       <div>
         <h2 className="h00-responsive">Thanks for the</h2>
         <form>
-          <label class="hide">gift</label>
+          <label className="hide">gift</label>
           <input type="text" className="block field y-group-item" placeholder="amazing pair of socks!" />
         </form>
       </div>
