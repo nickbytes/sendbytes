@@ -1,4 +1,5 @@
 var React = require('react')
+import { Router, Route, Link } from 'react-router'
 
 var Thanks = React.createClass({
   getInitialState: function() {
@@ -18,9 +19,9 @@ var Thanks = React.createClass({
           <input type="text" className="block field y-group-item" placeholder="amazing pair of socks!" defaultValue="amazing pair of socks!" onChange={this.handleChange} />
         </form>
 
+        <Link to={`/1/`+ this.state.value}>Your card</Link>
 
 
-        <a href={this.state.value}>Check out your card</a>
       </div>
     )
   }

@@ -49,7 +49,7 @@
 	var React = __webpack_require__(1);
 	var Router = __webpack_require__(157);
 	var routes = __webpack_require__(196);
-	__webpack_require__(201);
+	__webpack_require__(202);
 
 	Router.run(routes, function (Root) {
 	  React.render(React.createElement(Root, null), document.getElementById('app'));
@@ -23553,7 +23553,7 @@
 	var Home = __webpack_require__(198);
 	var Thanks = __webpack_require__(199);
 	var College = __webpack_require__(200);
-	var Rthanks = __webpack_require__(205);
+	var Rthanks = __webpack_require__(201);
 	var Router = __webpack_require__(157);
 	var DefaultRoute = Router.DefaultRoute;
 	var Route = Router.Route;
@@ -23649,6 +23649,8 @@
 
 	'use strict';
 
+	var _reactRouter = __webpack_require__(157);
+
 	var React = __webpack_require__(1);
 
 	var Thanks = React.createClass({
@@ -23682,9 +23684,9 @@
 	        React.createElement('input', { type: 'text', className: 'block field y-group-item', placeholder: 'amazing pair of socks!', defaultValue: 'amazing pair of socks!', onChange: this.handleChange })
 	      ),
 	      React.createElement(
-	        'a',
-	        { href: this.state.value },
-	        'Check out your card'
+	        _reactRouter.Link,
+	        { to: '/1/' + this.state.value },
+	        'Your card'
 	      )
 	    );
 	  }
@@ -23732,13 +23734,48 @@
 /* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var Router = __webpack_require__(157);
+
+	var Rthanks = React.createClass({
+	  displayName: 'Rthanks',
+
+	  mixins: [Router.State],
+	  getInitialState: function getInitialState() {
+	    return {
+	      giftHelp: ''
+	    };
+	  },
+	  render: function render() {
+	    var giftHelp = this.getParams().gift;
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(
+	        'h2',
+	        { className: 'h00-responsive' },
+	        'Thanks for the ',
+	        giftHelp
+	      )
+	    );
+	  }
+	});
+
+	module.exports = Rthanks;
+
+/***/ },
+/* 202 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(202);
+	var content = __webpack_require__(203);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(204)(content, {});
+	var update = __webpack_require__(205)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -23755,10 +23792,10 @@
 	}
 
 /***/ },
-/* 202 */
+/* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(203)();
+	exports = module.exports = __webpack_require__(204)();
 	// imports
 
 
@@ -23769,7 +23806,7 @@
 
 
 /***/ },
-/* 203 */
+/* 204 */
 /***/ function(module, exports) {
 
 	/*
@@ -23825,7 +23862,7 @@
 
 
 /***/ },
-/* 204 */
+/* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -24048,41 +24085,6 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
-
-/***/ },
-/* 205 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(1);
-	var Router = __webpack_require__(157);
-
-	var Rthanks = React.createClass({
-	  displayName: 'Rthanks',
-
-	  mixins: [Router.State],
-	  getInitialState: function getInitialState() {
-	    return {
-	      giftHelp: ''
-	    };
-	  },
-	  render: function render() {
-	    var giftHelp = this.getParams().gift;
-	    return React.createElement(
-	      'div',
-	      null,
-	      React.createElement(
-	        'h2',
-	        { className: 'h00-responsive' },
-	        'Thanks for the ',
-	        giftHelp
-	      )
-	    );
-	  }
-	});
-
-	module.exports = Rthanks;
 
 /***/ }
 /******/ ]);
