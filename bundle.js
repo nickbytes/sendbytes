@@ -49,7 +49,7 @@
 	var React = __webpack_require__(1);
 	var Router = __webpack_require__(157);
 	var routes = __webpack_require__(196);
-	__webpack_require__(199);
+	__webpack_require__(201);
 
 	Router.run(routes, function (Root) {
 	  React.render(React.createElement(Root, null), document.getElementById('app'));
@@ -23551,8 +23551,8 @@
 	var React = __webpack_require__(1);
 	var Main = __webpack_require__(197);
 	var Home = __webpack_require__(198);
-	var Thanks = __webpack_require__(203);
-	var College = __webpack_require__(204);
+	var Thanks = __webpack_require__(199);
+	var College = __webpack_require__(200);
 	var Router = __webpack_require__(157);
 	var DefaultRoute = Router.DefaultRoute;
 	var Route = Router.Route;
@@ -23645,13 +23645,98 @@
 /* 199 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var Thanks = React.createClass({
+	  displayName: 'Thanks',
+
+	  getInitialState: function getInitialState() {
+	    return {
+	      value: 'Hello!'
+	    };
+	  },
+	  handleChange: function handleChange(event) {
+	    this.setState({ value: event.target.value });
+	  },
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(
+	        'h2',
+	        { className: 'h00-responsive' },
+	        'Thanks for the'
+	      ),
+	      React.createElement(
+	        'form',
+	        null,
+	        React.createElement(
+	          'label',
+	          { className: 'hide' },
+	          'gift'
+	        ),
+	        React.createElement('input', { type: 'text', className: 'block field y-group-item', placeholder: 'amazing pair of socks!', defaultValue: 'HelloDefault!', onChange: this.handleChange })
+	      ),
+	      React.createElement(
+	        'h1',
+	        null,
+	        this.state.value
+	      )
+	    );
+	  }
+	});
+
+	module.exports = Thanks;
+
+/***/ },
+/* 200 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(1);
+
+	var College = React.createClass({
+	  displayName: "College",
+
+	  render: function render() {
+	    return React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "h2",
+	        { className: "h00-responsive" },
+	        "Good luck at college! Don't"
+	      ),
+	      React.createElement(
+	        "form",
+	        null,
+	        React.createElement(
+	          "label",
+	          { className: "hide" },
+	          "Helpful advice"
+	        ),
+	        React.createElement("input", { type: "text", className: "block field y-group-item", placeholder: "forget to change your sheets!" })
+	      )
+	    );
+	  }
+	});
+
+	module.exports = College;
+
+/***/ },
+/* 201 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(200);
+	var content = __webpack_require__(202);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(202)(content, {});
+	var update = __webpack_require__(204)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -23668,10 +23753,10 @@
 	}
 
 /***/ },
-/* 200 */
+/* 202 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(201)();
+	exports = module.exports = __webpack_require__(203)();
 	// imports
 
 
@@ -23682,7 +23767,7 @@
 
 
 /***/ },
-/* 201 */
+/* 203 */
 /***/ function(module, exports) {
 
 	/*
@@ -23738,7 +23823,7 @@
 
 
 /***/ },
-/* 202 */
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -23961,78 +24046,6 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
-
-/***/ },
-/* 203 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var React = __webpack_require__(1);
-
-	var Thanks = React.createClass({
-	  displayName: "Thanks",
-
-	  render: function render() {
-	    return React.createElement(
-	      "div",
-	      null,
-	      React.createElement(
-	        "h2",
-	        { className: "h00-responsive" },
-	        "Thanks for the"
-	      ),
-	      React.createElement(
-	        "form",
-	        null,
-	        React.createElement(
-	          "label",
-	          { className: "hide" },
-	          "gift"
-	        ),
-	        React.createElement("input", { type: "text", className: "block field y-group-item", placeholder: "amazing pair of socks!" })
-	      )
-	    );
-	  }
-	});
-
-	module.exports = Thanks;
-
-/***/ },
-/* 204 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var React = __webpack_require__(1);
-
-	var College = React.createClass({
-	  displayName: "College",
-
-	  render: function render() {
-	    return React.createElement(
-	      "div",
-	      null,
-	      React.createElement(
-	        "h2",
-	        { className: "h00-responsive" },
-	        "Good luck at college! Don't"
-	      ),
-	      React.createElement(
-	        "form",
-	        null,
-	        React.createElement(
-	          "label",
-	          { className: "hide" },
-	          "Helpful advice"
-	        ),
-	        React.createElement("input", { type: "text", className: "block field y-group-item", placeholder: "forget to change your sheets!" })
-	      )
-	    );
-	  }
-	});
-
-	module.exports = College;
 
 /***/ }
 /******/ ]);
