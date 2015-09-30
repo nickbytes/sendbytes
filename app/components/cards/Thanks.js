@@ -20,7 +20,7 @@ var Thanks = React.createClass({
 
 
 
-        <h1>{this.state.value}</h1>
+        <a href={this.state.value}>Check out your card</a>
       </div>
     )
   }

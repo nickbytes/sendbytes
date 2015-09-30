@@ -23553,6 +23553,7 @@
 	var Home = __webpack_require__(198);
 	var Thanks = __webpack_require__(199);
 	var College = __webpack_require__(200);
+	var Rthanks = __webpack_require__(205);
 	var Router = __webpack_require__(157);
 	var DefaultRoute = Router.DefaultRoute;
 	var Route = Router.Route;
@@ -23561,6 +23562,7 @@
 	  Route,
 	  { name: 'app', path: '/', handler: Main },
 	  React.createElement(Route, { name: 'thanks', path: '1', handler: Thanks }),
+	  React.createElement(Route, { name: 'rthanks', path: '1/:gift', handler: Rthanks }),
 	  React.createElement(Route, { name: 'college', path: '2', handler: College }),
 	  React.createElement(DefaultRoute, { handler: Home })
 	);
@@ -23680,9 +23682,9 @@
 	        React.createElement('input', { type: 'text', className: 'block field y-group-item', placeholder: 'amazing pair of socks!', defaultValue: 'amazing pair of socks!', onChange: this.handleChange })
 	      ),
 	      React.createElement(
-	        'h1',
-	        null,
-	        this.state.value
+	        'a',
+	        { href: this.state.value },
+	        'Check out your card'
 	      )
 	    );
 	  }
@@ -24046,6 +24048,41 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
+
+/***/ },
+/* 205 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var Router = __webpack_require__(157);
+
+	var Rthanks = React.createClass({
+	  displayName: 'Rthanks',
+
+	  mixins: [Router.State],
+	  getInitialState: function getInitialState() {
+	    return {
+	      giftHelp: ''
+	    };
+	  },
+	  render: function render() {
+	    var giftHelp = this.getParams().gift;
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(
+	        'h2',
+	        { className: 'h00-responsive' },
+	        'Thanks for the ',
+	        giftHelp
+	      )
+	    );
+	  }
+	});
+
+	module.exports = Rthanks;
 
 /***/ }
 /******/ ]);
