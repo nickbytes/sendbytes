@@ -23654,7 +23654,7 @@
 
 	  getInitialState: function getInitialState() {
 	    return {
-	      value: 'Hello!'
+	      value: ''
 	    };
 	  },
 	  handleChange: function handleChange(event) {
@@ -23677,7 +23677,7 @@
 	          { className: 'hide' },
 	          'gift'
 	        ),
-	        React.createElement('input', { type: 'text', className: 'block field y-group-item', placeholder: 'amazing pair of socks!', defaultValue: 'HelloDefault!', onChange: this.handleChange })
+	        React.createElement('input', { type: 'text', className: 'block field y-group-item', placeholder: 'amazing pair of socks!', defaultValue: 'amazing pair of socks!', onChange: this.handleChange })
 	      ),
 	      React.createElement(
 	        'h1',

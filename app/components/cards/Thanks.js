@@ -3,7 +3,7 @@ var React = require('react')
 var Thanks = React.createClass({
   getInitialState: function() {
     return {
-      value: 'Hello!'
+      value: ''
     }
   },
   handleChange: function(event){
@@ -15,7 +15,7 @@ var Thanks = React.createClass({
         <h2 className="h00-responsive">Thanks for the</h2>
         <form>
           <label className="hide">gift</label>
-          <input type="text" className="block field y-group-item" placeholder="amazing pair of socks!" defaultValue="HelloDefault!" onChange={this.handleChange} />
+          <input type="text" className="block field y-group-item" placeholder="amazing pair of socks!" defaultValue="amazing pair of socks!" onChange={this.handleChange} />
         </form>
 
 
