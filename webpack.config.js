@@ -1,7 +1,10 @@
+var path = require("path");
+
 module.exports = {
   entry: "./app/App.js",
   output: {
-    filename: "bundle.js"
+    filename: "bundle.js",
+    publicPath: "http://localhost:8080/assets"
   },
   module: {
     loaders: [
