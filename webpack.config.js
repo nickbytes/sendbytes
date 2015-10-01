@@ -1,35 +1,17 @@
 var path = require("path");
-var webpack = require('webpack');
 
 module.exports = {
-  entry: [
-    'webpack-dev-server/client?http://localhost:3000/',
-    'webpack/hot/only-dev-server',
-    './app/App'
-  ],
+  entry: "./app/App.js",
   output: {
-    path: path.join(__dirname, ''),
     filename: "bundle.js",
-    publicPath: "/assets/"
+    publicPath: "http://localhost:8080/"
   },
   module: {
     loaders: [
-      {
-        test: /\.js?$/,
-        exclude: /node_modules/,
-        loaders: ['react-hot', 'babel'],
-        include: path.join(__dirname, 'src')
-      },
-      {
-        test: /\.css$/,
-        exclude: /colors\.css/,
-        loader: 'style-loader!css-loader!cssnext-loader'
-      }
+      { test: /\.jsx?$/, exclude: /(node_modules)/, loader: 'babel' },
+      { test: /\.css$/, exclude: /colors\.css/, loader: 'style-loader!css-loader!cssnext-loader' }
     ]
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
   cssnext: {
     compress: true
   }
