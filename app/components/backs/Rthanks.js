@@ -1,6 +1,7 @@
 import React from 'react'
 import Router from 'react-router'
 import base64 from 'js-base64'
+import Isvg from 'react-inlinesvg'
 
 var Rthanks = React.createClass({
   mixins: [Router.State],
@@ -22,6 +23,7 @@ var Rthanks = React.createClass({
       <div className="m2 p2" style={outerCard}>
         <div className="border p2" style={innerCard}>
           <h2 className="h00-responsive center">Thanks for the {giftFinal}</h2>
+          <Isvg src="/assets/bug.svg"></Isvg>
         </div>
       </div>
     )
