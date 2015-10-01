@@ -23914,14 +23914,24 @@
 	  },
 	  render: function render() {
 	    var giftHelp = this.getParams().gift;
+	    var outerCard = {
+	      backgroundColor: '#fff8c8'
+	    };
+	    var innerCard = {
+	      minHeight: '400px'
+	    };
 	    return _react2['default'].createElement(
 	      'div',
-	      null,
+	      { className: 'm2 p2', style: outerCard },
 	      _react2['default'].createElement(
-	        'h2',
-	        { className: 'h00-responsive' },
-	        'Thanks for the ',
-	        giftHelp
+	        'div',
+	        { className: 'border p2', style: innerCard },
+	        _react2['default'].createElement(
+	          'h2',
+	          { className: 'h00-responsive center' },
+	          'Thanks for the ',
+	          giftHelp
+	        )
 	      )
 	    );
 	  }
