@@ -1,16 +1,21 @@
-var React = require('react')
+import React from 'react'
 import { Router, Route, Link } from 'react-router'
 
-var Thanks = React.createClass({
-  getInitialState: function() {
-    return {
+
+class Thanks extends React.Component{
+  constructor(props){
+    super(props)
+    this.state = {
       value: ''
     }
-  },
-  handleChange: function(event){
-    this.setState({value: event.target.value});
-  },
-  render: function(){
+    this.handleChange = this.handleChange.bind(this)
+  }
+  handleChange(event){
+    var mesInit = event.target.value
+    console.log(mesInit)
+    this.setState({value: event.target.value})
+  }
+  render(){
     return(
       <div>
         <h2 className="h00-responsive">Thanks for the</h2>
@@ -20,11 +25,9 @@ var Thanks = React.createClass({
         </form>
 
         <Link to={`/1/`+ this.state.value}>Your card</Link>
-
-
       </div>
     )
   }
-})
+}
 
-module.exports = Thanks
+export default Thanks

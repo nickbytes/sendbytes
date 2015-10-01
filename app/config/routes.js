@@ -1,14 +1,12 @@
-var React = require('react')
-var Main = require('../components/Main')
-var Home = require('../components/Home')
-var Thanks = require('../components/cards/Thanks')
-var College = require('../components/cards/College')
-var Rthanks = require('../components/backs/Rthanks')
-var Router = require('react-router')
-var DefaultRoute = Router.DefaultRoute
-var Route = Router.Route
+import React from 'react'
+import Main from '../components/Main'
+import Home from '../components/Home'
+import Thanks from '../components/cards/Thanks'
+import College from '../components/cards/College'
+import Rthanks from '../components/backs/Rthanks'
+import { Router, DefaultRoute, Route } from 'react-router'
 
-module.exports = (
+export default (
   <Route name="app" path="/" handler={Main}>
     <Route name="thanks" path="1" handler={Thanks} />
     <Route name="rthanks" path="1/:gift" handler={Rthanks} />

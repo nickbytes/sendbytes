@@ -1,7 +1,7 @@
-var React = require('react')
+import React from 'react'
 
-var College = React.createClass({
-  render: function(){
+class College extends React.Component{
+  render(){
     return(
       <div>
         <h2 className="h00-responsive">Good luck at college! Don't</h2>
@@ -12,6 +12,6 @@ var College = React.createClass({
       </div>
     )
   }
-})
+}
 
-module.exports = College
+export default College
