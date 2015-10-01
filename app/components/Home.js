@@ -9,9 +9,7 @@ class Home extends React.Component{
         <p>Send beautifully goofy, personalized e-cards.</p>
 
         <ul className="list-reset">
-          <li><a href="/1">Thank You (Gift)</a></li>
           <Link to={`/1`}>Your card</Link>
-          <li><a href="/2">Graduation</a></li>
         </ul>
       </div>
     )

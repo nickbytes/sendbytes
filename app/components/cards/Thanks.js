@@ -1,5 +1,6 @@
 import React from 'react'
 import { Router, Route, Link } from 'react-router'
+import base64 from 'js-base64'
 
 
 class Thanks extends React.Component{
@@ -12,8 +13,8 @@ class Thanks extends React.Component{
   }
   handleChange(event){
     var mesInit = event.target.value
-    console.log(mesInit)
-    this.setState({value: event.target.value})
+    var life = base64.Base64.encode(mesInit)
+    this.setState({value: life})
   }
   render(){
     return(
