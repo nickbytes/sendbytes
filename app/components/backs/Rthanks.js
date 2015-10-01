@@ -21,7 +21,7 @@ var Rthanks = React.createClass({
     return(
       <div className="m2 p2" style={outerCard}>
         <div className="border p2" style={innerCard}>
-          <h2 className="h00-responsive center">Thanks for the {giftFinal} odasdfasdf</h2>
+          <h2 className="h00-responsive center">Thanks for the {giftFinal}</h2>
         </div>
       </div>
     )
