@@ -3,4 +3,13 @@
 
 :root{
   --sadblue: #6292f0;
+  --fancytype: 'Neuton', serif;
+}
+
+.fancy{
+  font-family: var(--fancytype);
+}
+
+svg{
+  width: 100%;
 }
