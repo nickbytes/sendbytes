@@ -5,7 +5,7 @@ class Promo extends React.Component{
     return(
       <div>
         <ul className="list-reset ">
-          <li className="gray h6">Cards from <a href="http://sendbytes.space">sendbytes.com</a></li>
+          <li className="gray h6">Cards from <a href="http://sendbytes.space">sendbytes.space</a></li>
         </ul>
       </div>
     )

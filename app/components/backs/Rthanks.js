@@ -31,8 +31,8 @@ var Rthanks = React.createClass({
             <div className="col-4 mx-auto" style={bug}>
               <Isvg src="/assets/bug.svg"></Isvg>
             </div>
-            <div className="sm-col">
-              <h2 className="h00-responsive center fancy maroon">Thanks for the {giftFinal}</h2>
+            <div className="col-10 mx-auto">
+              <h2 className="h0-responsive mt2 mb4 center fancy maroon">Thanks for the {giftFinal}</h2>
             </div>
 
             <div className="absolute bottom-0 right-0 p2">
