@@ -22,13 +22,14 @@ var Rthanks = React.createClass({
       borderColor: '#85144b'
     }
     var bug = {
-      opacity: '0.5'
+      opacity: '0.5',
+      maxWidth: '100px'
     }
     return(
       <div>
         <div className="m2 p2" style={outerCard}>
           <div className="clearfix border p2 relative" style={innerCard}>
-            <div className="col-4 mx-auto" style={bug}>
+            <div className="py2 mx-auto" style={bug}>
               <Isvg src="/assets/bug.svg"></Isvg>
             </div>
             <div className="col-10 mx-auto">
