@@ -13,3 +13,7 @@
 svg{
   width: 100%;
 }
+
+.container{
+  max-width: 38em;
+}
