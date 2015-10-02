@@ -15,7 +15,8 @@ var Rthanks = React.createClass({
     var giftHelp = this.getParams().gift;
     var giftFinal = base64.Base64.decode(giftHelp)
     var outerCard = {
-      backgroundColor: '#f8f5ec'
+      backgroundColor: '#f8f5ec',
+      boxShadow: '-2px 2px 1px rgba(0,0,0,0.2)'
     }
     var innerCard = {
       minHeight: '400px',
