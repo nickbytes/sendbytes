@@ -16,10 +16,11 @@ var Rthanks = React.createClass({
     var giftFinal = base64.Base64.decode(giftHelp)
     var outerCard = {
       backgroundColor: '#f8f5ec',
-      boxShadow: '-2px 2px 1px rgba(0,0,0,0.2)'
+      boxShadow: '-2px 2px 3px rgba(0,0,0,0.2)',
+      maxWidth: '800px'
     }
     var innerCard = {
-      minHeight: '400px',
+      maxHeight: '500px',
       borderColor: '#85144b'
     }
     var bug = {
@@ -27,17 +28,17 @@ var Rthanks = React.createClass({
       maxWidth: '100px'
     }
     return(
-      <div>
-        <div className="m2 p2" style={outerCard}>
+      <div className="m2">
+        <div className="p2 mx-auto" style={outerCard}>
           <div className="clearfix border p2 relative" style={innerCard}>
             <div className="py2 mx-auto" style={bug}>
               <Isvg src="/assets/bug.svg"></Isvg>
             </div>
             <div className="col-10 mx-auto">
-              <h2 className="h0-responsive mt2 mb4 center fancy maroon">Thanks for the {giftFinal}</h2>
+              <h2 className="h0-responsive mt2 pb4 mb3 center fancy maroon">Thanks for the {giftFinal}</h2>
             </div>
 
-            <div className="absolute bottom-0 right-0 p2">
+            <div className="right">
               <h6 className="caps fancy maroon left-align">From</h6>
               <h1 className="right-align m0">Your name</h1>
             </div>
