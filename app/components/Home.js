@@ -31,9 +31,9 @@ class Home extends React.Component{
         <div className="sm-col-6 md-col-8 mx-auto mt3 px2">
           <h3 className="fancy maroon">Inspiration for project</h3>
           <ul className="list-reset">
-            <li><a className="" href="">Naz Hussan's Atelier August #1</a></li>
-            <li><a className="" href="">Femmebot's Gutenberg Project</a></li>
-            <li><a className="" href="">someecards</a></li>
+            <li><a className="" href="https://nhassan.net/atelier/august-2015/01.html">Naz Hassan's Cards for the Train</a></li>
+            <li><a className="" href="http://femmebot.github.io/Gutenberg-SVG/10-2014/index.html">Femmebot's Gutenberg Project</a></li>
+            <li><a className="" href="http://www.someecards.com/ecards/all/?sort=popular">someecards</a></li>
             <li>My mother</li>
           </ul>
         </div>

@@ -54,7 +54,7 @@ class Thanks extends React.Component{
 
           </div>
         </div>
-        <Link to={`/1/`+ this.state.value}>Your card</Link>
+        <Link to={`/1/`+ this.state.value}>See your card</Link>
       </div>
     )
   }
