@@ -31,6 +31,14 @@ class Thanks extends React.Component{
       opacity: '0.5',
       maxWidth: '100px'
     }
+    var formStyle = {
+      backgroundColor: 'transparent',
+      border: 'none',
+      fontFamily: 'Neuton',
+      fontSize: '36px',
+      color: '#85144b',
+      height: '1.5em'
+    }
     return(
       <div className="m2">
         <div className="p2 mx-auto" style={outerCard}>
@@ -44,7 +52,7 @@ class Thanks extends React.Component{
 
             <form>
               <label className="hide">gift</label>
-              <input type="text" className="block field y-group-item" placeholder="amazing pair of socks!" defaultValue="amazing pair of socks!" onChange={this.handleChange} />
+              <input style={formStyle} type="text" className="block field" placeholder="the amazing pair of socks!" defaultValue="" onChange={this.handleChange} />
             </form>
 
             <div className="right">

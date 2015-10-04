@@ -17,3 +17,7 @@ svg{
 .container{
   max-width: 38em;
 }
+
+.field:focus{
+  box-shadow: none;
+}
