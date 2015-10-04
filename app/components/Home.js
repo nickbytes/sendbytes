@@ -16,7 +16,7 @@ class Home extends React.Component{
     return(
       <div className="px2">
         <div className="container38 mx-auto m2 p2" style={cardStyle}>
-          <div className="p2 border" style={innerCard}>
+          <div className="p2 border sm-px3 md-px4" style={innerCard}>
             <div className="mx-auto mb3">
               <h1 className="fancy maroon mb1">Sendbytes.space</h1>
               <p>Send beautifully goofy, personalized e-cards. Great for random acts of kindess, letting family/friends/coworkers know they're awesome, or clowning. Enjoy.</p>
