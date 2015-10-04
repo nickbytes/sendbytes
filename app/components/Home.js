@@ -14,7 +14,7 @@ class Home extends React.Component{
       borderColor: '#85144b'
     }
     return(
-      <div className="px2">
+      <div className="px2 mt2 mb2 lg-mt3 lg-mb3">
         <div className="container38 mx-auto m2 p2" style={cardStyle}>
           <div className="p2 border sm-px3 md-px4" style={innerCard}>
             <div className="mx-auto mb3">
@@ -41,7 +41,7 @@ class Home extends React.Component{
               <p>Issues? Want to contribute a design or code? Email <a href="mailto:nick@nickbytes.com">Nick</a>.</p>
             </div>
 
-            <div className="mx-auto mt3">
+            <div className="mx-auto mt3 mb3">
               <h3 className="fancy maroon">Inspiration for project</h3>
               <ul className="list-reset">
                 <li><a className="" href="https://nhassan.net/atelier/august-2015/01.html">Naz Hassan's Cards for the Train</a></li>

@@ -5,6 +5,7 @@
 :root{
   --sadblue: #6292f0;
   --fancytype: 'Neuton', serif;
+  --link-color: var(--sadblue);
 }
 
 .fancy{
