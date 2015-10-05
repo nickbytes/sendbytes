@@ -25,7 +25,7 @@ class Home extends React.Component{
             <div className="mx-auto">
               <h2 className="fancy maroon">Available Cards</h2>
               <ul className="">
-                <li><Link to={`/1`}>Thanks for ______</Link></li>
+                <li><Link to={`thanks`}>Thanks for ______</Link></li>
               </ul>
             </div>
 
