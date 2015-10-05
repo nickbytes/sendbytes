@@ -20,8 +20,6 @@ class Home extends React.Component{
             <div className="mx-auto mb3">
               <h1 className="fancy maroon mb1">Sendbytes.space</h1>
               <p>Send beautifully goofy, personalized e-cards. Great for random acts of kindess, letting family/friends/coworkers know they're awesome, or clowning. Enjoy.</p>
-
-              <p>If you have any issues, email <a href="mailto:nick@nickbytes.com">Nick</a>.</p>
             </div>
 
             <div className="mx-auto">
@@ -38,7 +36,7 @@ class Home extends React.Component{
 
             <div className="mx-auto mt3">
               <h3 className="fancy maroon">Questions?</h3>
-              <p>Issues? Want to contribute a design or code? Email <a href="mailto:nick@nickbytes.com">Nick</a>.</p>
+              <p>Issues? Want to contribute a card design or code? Email <a href="mailto:nick@nickbytes.com">Nick</a>.</p>
             </div>
 
             <div className="mx-auto mt3 mb3">
