@@ -31,7 +31,7 @@ class Home extends React.Component{
 
             <div className="mx-auto mt3">
               <h3 className="fancy maroon">How it's made</h3>
-              <p>Sendbytes.space is made using React.js, React Router, Webpack, Basscss, ES6, and SVGs from Femmebot's Gutenberg Project. You can view the project on <a href="">Github</a>.</p>
+              <p>Sendbytes.space is made using React.js, React Router, Webpack, Basscss, ES6, and SVGs from Femmebot's Gutenberg Project. You can view the project on <a href="https://github.com/nickbytes/sendbytes">Github</a>.</p>
             </div>
 
             <div className="mx-auto mt3">
