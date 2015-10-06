@@ -11,7 +11,7 @@ class Thanks extends React.Component{
       value: 'ZWF0aW5nIHRoZSBsYXN0IHBpZWNlIG9mIGJpcnRoZGF5IGNha2Uu',
       msend: 'eating the last piece of birthday cake.',
       cardFrom: 'Nick',
-      fromEnc: ''
+      fromEnc: 'Tmljaw=='
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleName = this.handleName.bind(this)
@@ -44,23 +44,31 @@ class Thanks extends React.Component{
       backgroundColor: 'transparent',
       border: 'none',
       fontFamily: 'Neuton',
-      fontSize: '36px',
-      color: '#85144b',
-      height: '1.5em'
+      fontSize: '24px',
+      height: '1.2em'
+    }
+
+    var areaStyle = {
+      width: '100%',
+      resize: 'none',
+      border: 'none',
+      boxShadow: 'none',
+      fontSize: '24px',
+      lineHeight: '1.1em'
     }
     return(
       <div>
-        <div>
+        <div className="p2 mx-auto container800">
           <form>
             <label className="block h3 bold fancy">1. Your Message</label>
-            <textarea maxLength={75} onChange={this.handleChange} defaultValue="eating the last piece of birthday cake."></textarea>
+            <textarea className="fancy field" style={areaStyle} maxLength={75} onChange={this.handleChange} placeholder="eating the last piece of birthday cake."></textarea>
 
             <label className="block h3 bold fancy">2. From</label>
-            <input maxLength={15} type="text" className="block field" placeholder="Nick" onChange={this.handleName}/>
+            <input maxLength={15} type="text" className="block field" placeholder="Nick" style={formStyle} onChange={this.handleName}/>
           </form>
         </div>
         <div className="m2">
-          <h3 className="fancy">3. Preview</h3>
+          <h3 className="fancy container800 mx-auto border-bottom py1 mb3">3. Preview</h3>
           <div className="p2 mx-auto" style={outerCard}>
             <div className="clearfix border p2 relative" style={innerCard}>
               <div className="py2 mx-auto" style={bug}>
@@ -72,15 +80,15 @@ class Thanks extends React.Component{
 
               <div className="right">
                 <h6 className="caps fancy maroon left-align">From</h6>
-                <h1 className="right-align m0">{this.state.cardFrom}</h1>
+                <h1 className="right-align m0 fancy">{this.state.cardFrom}</h1>
               </div>
 
             </div>
           </div>
         </div>
-        <div>
-          <h3 className="fancy">4. Send this link to desired recipient.</h3>
-          <small className="block">Don't worry, they'll only see the card.</small>
+        <div className="p2 mx-auto container800">
+          <h3 className="fancy mb0">4. Send this link to desired recipient.</h3>
+          <small className="gray block mb2">**Don't worry, they'll only see the card.**</small>
           <Link to={`/final/1/`+ this.state.value + `/` + this.state.fromEnc}>sendbytes.space/final/1/{this.state.value}/{this.state.fromEnc}</Link>
         </div>
       </div>

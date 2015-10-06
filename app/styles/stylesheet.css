@@ -20,6 +20,10 @@ svg{
   max-width: 38em;
 }
 
+.container800{
+  max-width: 800px;
+}
+
 .field:focus{
   box-shadow: none;
 }
