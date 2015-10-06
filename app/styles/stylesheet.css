@@ -28,6 +28,10 @@ svg{
   box-shadow: none;
 }
 
+.break-word{
+  word-wrap: break-word;
+}
+
 .text-sizer{
   font-size: 24px;
 }

@@ -89,7 +89,7 @@ class Thanks extends React.Component{
         <div className="p2 mx-auto container800">
           <h3 className="fancy mb0">4. Send this link to desired recipient.</h3>
           <small className="gray block mb2">**Don't worry, they'll only see the card.**</small>
-          <Link to={`/final/1/`+ this.state.value + `/` + this.state.fromEnc}>sendbytes.space/final/1/{this.state.value}/{this.state.fromEnc}</Link>
+          <Link className="break-word" to={`/final/1/`+ this.state.value + `/` + this.state.fromEnc}>sendbytes.space/final/1/{this.state.value}/{this.state.fromEnc}</Link>
         </div>
       </div>
     )
