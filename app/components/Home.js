@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router'
-import FitterHappierText from 'react-fitter-happier-text'
 
 class Home extends React.Component{
 
