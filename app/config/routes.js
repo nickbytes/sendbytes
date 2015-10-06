@@ -8,7 +8,7 @@ import { Router, DefaultRoute, Route } from 'react-router'
 export default (
   <Route name="app" path="/" handler={Main}>
     <Route name="thanks" path="draft/1" handler={Thanks} />
-    <Route name="rthanks" path="final/1/:gift" handler={Rthanks} />
+    <Route name="rthanks" path="final/1/:gift/:nameHelp" handler={Rthanks} />
     <DefaultRoute handler={Home} />
   </Route>
 )

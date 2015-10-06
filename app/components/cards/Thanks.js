@@ -8,14 +8,23 @@ class Thanks extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-      value: ''
+      value: 'ZWF0aW5nIHRoZSBsYXN0IHBpZWNlIG9mIGJpcnRoZGF5IGNha2Uu',
+      msend: 'eating the last piece of birthday cake.',
+      cardFrom: 'Nick',
+      fromEnc: ''
     }
     this.handleChange = this.handleChange.bind(this)
+    this.handleName = this.handleName.bind(this)
   }
   handleChange(event){
     var mesInit = event.target.value
     var life = base64.Base64.encode(mesInit)
-    this.setState({value: life})
+    this.setState({value: life, msend: mesInit })
+  }
+  handleName(event){
+    var nameFr = event.target.value
+    var fromEncPre = base64.Base64.encode(nameFr)
+    this.setState({fromEnc: fromEncPre, cardFrom: nameFr})
   }
   render(){
     var outerCard = {
@@ -40,29 +49,40 @@ class Thanks extends React.Component{
       height: '1.5em'
     }
     return(
-      <div className="m2">
-        <div className="p2 mx-auto" style={outerCard}>
-          <div className="clearfix border p2 relative" style={innerCard}>
-            <div className="py2 mx-auto" style={bug}>
-              <Isvg src="/assets/bug.svg"></Isvg>
-            </div>
-            <div className="col-10 mx-auto">
-              <h2 className="h0-responsive mt2 pb4 mb3 center fancy maroon">Thanks for</h2>
-            </div>
+      <div>
+        <div>
+          <form>
+            <label className="block h3 bold fancy">1. Your Message</label>
+            <textarea onChange={this.handleChange} defaultValue="eating the last piece of birthday cake."></textarea>
 
-            <form>
-              <label className="hide">gift</label>
-              <input style={formStyle} type="text" className="block field" placeholder="the amazing pair of socks!" defaultValue="" onChange={this.handleChange} />
-            </form>
+            <label className="block h3 bold fancy">2. From</label>
+            <input type="text" className="block field" placeholder="Nick" onChange={this.handleName}/>
+          </form>
+        </div>
+        <div className="m2">
+          <h3 className="fancy">3. Preview</h3>
+          <div className="p2 mx-auto" style={outerCard}>
+            <div className="clearfix border p2 relative" style={innerCard}>
+              <div className="py2 mx-auto" style={bug}>
+                <Isvg src="/assets/bug.svg"></Isvg>
+              </div>
+              <div className="col-10 mx-auto">
+                <h2 className="h0-responsive mt2 pb4 mb3 center fancy maroon">Thanks for <span>{this.state.msend}</span></h2>
+              </div>
 
-            <div className="right">
-              <h6 className="caps fancy maroon left-align">From</h6>
-              <h1 className="right-align m0">Your name</h1>
+              <div className="right">
+                <h6 className="caps fancy maroon left-align">From</h6>
+                <h1 className="right-align m0">{this.state.cardFrom}</h1>
+              </div>
+
             </div>
-
           </div>
         </div>
-        <Link to={`/final/1/`+ this.state.value}>See your card</Link>
+        <div>
+          <h3 className="fancy">4. Send this link to desired recipient.</h3>
+          <small className="block">Don't worry, they'll only see the card.</small>
+          <Link to={`/final/1/`+ this.state.value + `/` + this.state.fromEnc}>sendbytes.space/final/1/{this.state.value}/{this.state.fromEnc}</Link>
+        </div>
       </div>
     )
   }

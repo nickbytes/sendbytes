@@ -13,7 +13,9 @@ var Rthanks = React.createClass({
   },
   render: function(){
     var giftHelp = this.getParams().gift;
+    var nameHelp = this.getParams().nameHelp;
     var giftFinal = base64.Base64.decode(giftHelp)
+    var nameFinal = base64.Base64.decode(nameHelp)
     var outerCard = {
       backgroundColor: '#f8f5ec',
       boxShadow: '-2px 2px 3px rgba(0,0,0,0.2)',
@@ -40,7 +42,7 @@ var Rthanks = React.createClass({
 
             <div className="right">
               <h6 className="caps fancy maroon left-align">From</h6>
-              <h1 className="right-align m0">Your name</h1>
+              <h1 className="right-align m0">{nameFinal}</h1>
             </div>
 
           </div>
