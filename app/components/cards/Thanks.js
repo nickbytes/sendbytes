@@ -53,10 +53,10 @@ class Thanks extends React.Component{
         <div>
           <form>
             <label className="block h3 bold fancy">1. Your Message</label>
-            <textarea onChange={this.handleChange} defaultValue="eating the last piece of birthday cake."></textarea>
+            <textarea maxLength={75} onChange={this.handleChange} defaultValue="eating the last piece of birthday cake."></textarea>
 
             <label className="block h3 bold fancy">2. From</label>
-            <input type="text" className="block field" placeholder="Nick" onChange={this.handleName}/>
+            <input maxLength={15} type="text" className="block field" placeholder="Nick" onChange={this.handleName}/>
           </form>
         </div>
         <div className="m2">
@@ -67,7 +67,7 @@ class Thanks extends React.Component{
                 <Isvg src="/assets/bug.svg"></Isvg>
               </div>
               <div className="col-10 mx-auto">
-                <h2 className="h0-responsive mt2 pb4 mb3 center fancy maroon">Thanks for <span>{this.state.msend}</span></h2>
+                <h2 className="text-sizer mt2 pb4 mb3 center fancy maroon">Thanks for <span>{this.state.msend}</span></h2>
               </div>
 
               <div className="right">
